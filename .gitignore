@@ -16,8 +16,8 @@
 onboarding.yaml
 
 # Split-portfolio v2 (set by /setup): the registry and per-project docs live in
-# the PRIVATE sibling repo (../apexyard-portfolio). These guards ensure a stray
-# registry or private project doc can never be committed to this PUBLIC fork.
+# a PRIVATE sibling portfolio repo. These guards ensure a stray registry or
+# private project doc can never be committed to this PUBLIC fork.
 # The framework README placeholders stay tracked (negations below).
 /apexyard.projects.yaml
 /projects/*
