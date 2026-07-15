@@ -8,6 +8,14 @@
 # block-onboarding-in-git.sh backstops this gitignore at commit time.
 onboarding.yaml
 
+# Split-portfolio v2 (set by /setup): the registry and per-project docs live in
+# the PRIVATE sibling repo (../apexyard-portfolio). These guards ensure a stray
+# registry or private project doc can never be committed to this PUBLIC fork.
+# The framework README placeholders stay tracked (negations below).
+/apexyard.projects.yaml
+/projects/*
+!/projects/README.md
+
 # ApexYard per-project config written by /onboard. Contains deploy URLs and
 # sensitive-topic notes that should not leak to git — keep it local.
 .claude/project-config.json
@@ -50,3 +58,5 @@ workspace/*/
 # `git status` shows them as untracked symlinks — leave them alone.
 # If you absolutely want to suppress the untracked-symlink line, add the
 # specific name to .git/info/exclude on each clone.
+
+.DS_Store
